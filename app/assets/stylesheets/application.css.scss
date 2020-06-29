@@ -1,0 +1,236 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+	font-family: 'Lato', sans-serif;
+	background: #EDEFF0;
+}
+ 
+.wrapper {
+	width: 60%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.main_header {
+	width: 100%;
+	margin: 0 auto;
+	background: white;
+	#logo {
+		float: left;
+		a {
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: -1px;
+			font-size: 2.5rem;
+			text-decoration: none;
+			color: black;
+		}
+	}
+	#buttons {
+		float: right;
+		a {
+			line-height: 60px;
+			background: black;
+			padding: .5em 1em;
+			border-radius: 0.2em;
+			color: white;
+			text-decoration: none;
+			font-weight: 100;
+		}
+	}
+}
+
+#posts {
+	background: white;
+	padding: 2em 5%;
+	border-radius: .5em;
+	.post {
+		margin: 1em 0;
+		padding: 1em 0;
+		border-bottom: 1px solid #D1d1d1;
+		.title {
+			margin: 0;
+			a {
+				color: black;
+				text-decoration: none;
+				font-weight: 100;
+				font-size: 50;
+			}
+		}
+		.date {
+			margin-top: .25rem;
+			font-size: 0.9rem;
+			color: #B2BAC2;
+		}
+	}
+}
+
+.button {
+	color: black;
+	border: 1px solid black;
+	padding: .5em 1em;
+	border-radius: 0.2em;
+	text-decoration: none; 
+}
+
+.buttonLarge {
+	color: black;
+	border: 1px solid black;
+	padding: .5em 1em;
+	border-radius: 0.2em;
+	text-decoration: none; 
+	margin-right: 2%;
+	display: block;
+	text-align: center;
+}
+
+.image {
+	width: 100%
+}
+
+.digg_pagination {
+	background: #FFFFFF; 
+	font-size: 1.2em;
+	cursor: default;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	padding-bottom: 30px,
+	/* self-clearing method: */ }
+	.digg_pagination a, .digg_pagination span, .digg_pagination em {
+	  padding: 0.2em 0.5em;
+	  display: block;
+	  float: left;
+	  margin-right: 1px; }
+	.digg_pagination .disabled {
+	  color: #999999;
+	  border: 1px solid #dddddd; }
+	.digg_pagination .current {
+	  font-style: normal;
+	  font-weight: bold;
+	  background: black;
+	  color: white;
+	  border: 1px solid black; }
+	.digg_pagination a {
+	  text-decoration: none;
+	  color: black;
+	  border: 1px solid black; }
+	  .digg_pagination a:hover, .digg_pagination a:focus {
+		color: #000033;
+		border-color: #000033; }
+	.digg_pagination .page_info {
+	  background: black;
+	  color: white;
+	  padding: 0.4em 0.6em;
+	  width: 22em;
+	  margin-bottom: 0.3em;
+	  text-align: center; }
+	  .digg_pagination .page_info b {
+		color: #000033;
+		background: black;
+		padding: 0.1em 0.25em; }
+	.digg_pagination:after {
+	  content: ".";
+	  display: block;
+	  height: 0;
+	  clear: both;
+	  visibility: hidden; }
+	* html .digg_pagination {
+	  height: 1%; }
+	*:first-child + html .digg_pagination {
+	  overflow: hidden; 
+  }
+
+#post_content {
+	background: white;
+	padding: 2em 5%;
+	border-radius: .5em;
+	h1 {
+		font-weight: 100;
+		font-size: 2em;
+		color: black;
+		margin-top: 0;
+	}
+	p {
+		color: black;
+		font-size: 0.9em;
+		line-height: 1.5;
+		font-size: 100;
+	}
+	#comments {
+		.comment {
+			border-bottom: 1px solid #d1d1d1;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			.content {
+			width: 75%;
+			float: left;
+			}
+			.buttons {
+				width: 25%;
+				float: left;
+				font-size: 0.8em;
+				text-align: right;
+				padding-top: 1.5em;
+				 a {
+					color: black;
+					border: 1px solid black;
+					padding: .5em 1em;
+					border-radius: 0.2em;
+					text-decoration: none; 
+					margin-right: 2%;
+				 }
+			}
+			.comment_content {
+				margin: 0;
+				padding: 0;
+			}
+			.comment_author {
+				color: #d1d1d1;
+				margin-top: 0.5rem; 
+				font-size: 0.6rem;
+				font-weight: 700;
+			}
+		}
+		input[type="submit"] {
+			background: black;
+			border: none;
+			color: white;
+			font-weight: 100;
+			padding: .5em 1em;
+			border-radius: .2em;
+		}
+		textarea {
+			width: 100%;
+			min-height: 200px;
+			border: 1px solid black;
+			border-radius: .2em;
+			margin: 1em 0;
+		}
+	}
+}
+

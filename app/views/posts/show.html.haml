@@ -1,0 +1,21 @@
+#post_content 
+	%h1= @post.title
+	=image_tag @post.urlToImage, class: "image"
+	%p= @post.content
+
+	= link_to 'Read More', @post.url, :target=>["_blank"], class: "buttonLarge"
+
+	#comments
+		%h2
+			= @post.comments.count
+			Comments 
+		= render @post.comments
+
+		- if user_signed_in?
+			= render "comments/form"
+		- else 
+			%h3 Log In to post comments
+
+	%br/
+	%hr/
+	%br/	

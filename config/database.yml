@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: newsforest_dev
+  pool: 5
+  timeout: 5000
+  username: risakohmano
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: newsforest_test
+  pool: 5
+  timeout: 5000
+  username: risakohmano
+
+production:
+  pool: 5
+  timeout: 5000

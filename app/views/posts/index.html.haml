@@ -1,0 +1,12 @@
+#posts
+	- @posts.each do |post|
+		.post
+			%h1.title= link_to post.title, post
+			
+			=image_tag post.urlToImage, class: "image"
+			%p.date
+				Published at
+				= post.publishedAt
+.digg_pagination
+	= will_paginate @post, :renderer => WillPaginate::ActionView::LinkRenderer
+
