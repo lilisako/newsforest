@@ -18,3 +18,7 @@ jobs:
         bundle -j 4
         bin/rails yarn:install db:setup assets:precompile
         bin/rails test
+    - name: upload coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
