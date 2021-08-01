@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise', '~> 4.4', '>= 4.4.3'
-gem 'simple_form', '~> 4.0', '>= 4.0.1'
+gem 'simple_form', '~> 5.0'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
